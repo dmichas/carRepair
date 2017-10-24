@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
     <body>
-    <#include "/Admin/menu_bar.ftl"/>
+    <#include "/admin/menu_bar.ftl"/>
 <div class="container">
     <table class="table table-striped">
 
