@@ -1,5 +1,5 @@
-$(document).ready (function vali () {
-    $("#mainForm").validate()({
+$(document).ready (function () {
+    $("#vehicleForm").validate()({
             rules: {
                 vat: {
                     required: true,
@@ -19,7 +19,7 @@ $(document).ready (function vali () {
                 },
                 year: {
                     required: true,
-                    minlength:4
+                    minlength: 4
 
                 },
                 messages: {
@@ -43,16 +43,10 @@ $(document).ready (function vali () {
                     year: {
                         required: "Please type the year of the car.",
                         minlength: "Year must be 4 characters long"
+                    }
                 }
             }
-        })
+        });
+});
 
-$("#username").focus(function () {
-    var firstname = $("#firstname").val();
-    var lastname = $("#lastname").val();
-    if (firstname && lastname && !this.value) {
-        this.value = firstname + "." + lastname;
-    }
-
-})
 
