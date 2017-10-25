@@ -1,5 +1,5 @@
 $(document).ready (function () {
-    $("#vehicleForm").validate()({
+    $("form#vehicleForm").validate()({
             rules: {
                 vat: {
                     required: true,
@@ -13,11 +13,15 @@ $(document).ready (function () {
                     required: true,
                     minlength: 5
                 },
+                brand:{
+                required: true,
+                minlength: 3
+               },
                 color: {
                     required: true,
                     minlength: 3
                 },
-                year: {
+                yearOfModel: {
                     required: true,
                     minlength: 4
 
@@ -36,11 +40,15 @@ $(document).ready (function () {
                         required: "Please provide model",
                         minlength: "Tax number must be 5 digits"
                     },
+                    brand: {
+                        required: "Please provide model",
+                        minlength: "Tax number must be 5 digits"
+                    },
                     colour: {
                         required: "Please type the colour of the car.",
                         minlength: "Colour must be at least 3 characters long"
                     },
-                    year: {
+                    yearOfModel: {
                         required: "Please type the year of the car.",
                         minlength: "Year must be 4 characters long"
                     }

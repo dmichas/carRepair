@@ -2,7 +2,10 @@
 <html>
 <head>
 <title>Add Vehicle</title>
-    <#include "/base_libraries/head.ftl"/>
+    <script type="text/javascript" src="/js/validvehicle.js"></script>
+
+<#include "/base_libraries/head.ftl"/>
+
 </head>
 
 <body>
@@ -41,7 +44,7 @@
 
 <@spring.bind "vehicleForm.color"/>
 <label for ="color">Color</label>
-    <input type="text" id="colour" name="color" placeholder="color.." value="${vehicleForm.color!""}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="colour" name="colour" placeholder="color.." value="${vehicleForm.color!""}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <#list spring.status.errorMessages as error>
      <span style="color:red">${error}</span>
 </#list><br>

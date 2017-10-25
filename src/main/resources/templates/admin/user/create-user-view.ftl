@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Add user</title>
+    <script type="text/javascript" src="/js/validuser.js"></script>
+
+    <title>Add user</title>
 <link rel="stylesheet" type="text/css" href="/css/newCustomer.css">
      <#include "/base_libraries/head.ftl"/>
 </head>
@@ -39,7 +41,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
        <h1>User registration form</h1>
-        <form action="/admin/create-user" id="mainForm" method="post" name="userForm" onsubmit="return myFunction()">
+        <form action="/admin/create-user" id="mainForm" method="post" name="userForm" onsubmit="return myFunction() ; uservalid()">
          <!--<#if userId??>
                 <a href="/admin/create-vehicle?id=${userId!""}">Go to vehicle form</a>
           </#if>-->
@@ -116,7 +118,7 @@
             </div>
                     </div>
                     &nbsp;<br>
-                    <input type="submit" value="Submit"><br><br>
+                    <input type="submit" value="Submit" onsubmit=""><br><br>
                  </div>
             </div>
         </form>
